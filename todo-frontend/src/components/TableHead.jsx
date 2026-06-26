@@ -25,7 +25,13 @@ function TableHead({ onNewItom }) {
           />
         </div>
         <div className="col-4">
-          <input type="date" name="" id="" ref={DateElement} />
+          <input
+            type="date"
+            className="form-control"
+            name=""
+            id=""
+            ref={DateElement}
+          />
         </div>
         <div className="col-2">
           <button className="btn btn-success">

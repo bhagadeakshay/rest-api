@@ -1,6 +1,6 @@
 import HeaderName from "./components/HeaderName";
 import TableHead from "./components/TableHead";
-import TodoItems from "./components/todoItems";
+import TodoItems from "./components/TodoItems";
 import React, { useState } from "react";
 import Message from "./components/Message";
 

@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -22,9 +23,17 @@ mongoose
   .connect(DB_PATH)
   .then(() => {
     console.log("Connected to MongoDB");
+
+    // Start server only when running locally
+    if (!process.env.VERCEL) {
+      const PORT = process.env.PORT || 3000;
+      app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+      });
+    }
   })
   .catch((err) => {
-    console.log(err);
+    console.error(err);
   });
 
 module.exports = app;

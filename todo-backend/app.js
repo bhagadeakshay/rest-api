@@ -10,17 +10,12 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "*",
-  }),
-);
+app.use(cors());
 
 app.use("/api/todo", todoItemsRouter);
 
 app.use(errorsController.pageNotFound);
 
-// Read MongoDB URL from environment variable
 const DB_PATH = process.env.MONGO_URI;
 
 mongoose

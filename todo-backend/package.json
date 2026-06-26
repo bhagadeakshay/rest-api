@@ -2,11 +2,11 @@
   "name": "ch_5-express-deepdive",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind": "npx @tailwindcss/cli -i ./public/input.css -o ./public/output.css --watch",
-    "start": "concurrently \"nodemon app.js\" \"npm run tailwind\""
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "tailwind": "npx @tailwindcss/cli -i ./public/input.css -o ./public/output.css --watch"
   },
   "keywords": [],
   "author": "",

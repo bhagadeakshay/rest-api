@@ -18,7 +18,7 @@ function App() {
     getItemsServer().then((items) => {
       setTodoItems(items);
     });
-  });
+  }, []);
 
   const handleAddTask = async (itemName, itemDueDate) => {
     console.log("new item added: ", itemName, itemDueDate);
